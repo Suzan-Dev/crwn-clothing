@@ -25,6 +25,11 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
+    .empty-message {
+      font-size: 17px;
+      margin: 20px auto;
+    }
   }
 
   button {
