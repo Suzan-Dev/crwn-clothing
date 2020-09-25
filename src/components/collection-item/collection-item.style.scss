@@ -31,7 +31,7 @@
     }
   }
 
-  button.inverted {
+  button {
     position: absolute;
     width: 80%;
     bottom: 40px;
@@ -44,7 +44,7 @@
       opacity: 0.8;
     }
 
-    button.inverted {
+    button {
       display: block;
     }
   }
