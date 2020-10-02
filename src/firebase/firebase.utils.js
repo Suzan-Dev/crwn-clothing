@@ -23,7 +23,7 @@ const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
-// Storing to database
+// Storing user to database
 export const createUserProfileDoc = async (userAuth, additionalData) => {
   if (userAuth === null) return;
 
@@ -48,6 +48,42 @@ export const createUserProfileDoc = async (userAuth, additionalData) => {
   }
 
   return userRef;
+};
+
+// Adding data to firestore
+export const addCollectionsAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = firestore.collection(collectionKey);
+
+  const batch = firestore.batch();
+  objectsToAdd.forEach((obj) => {
+    const newDocRef = collectionRef.doc();
+    batch.set(newDocRef, obj);
+  });
+
+  return await batch.commit();
+};
+
+// Getting data from firestore
+export const convertCollectionToShopData = (collection) => {
+  const transformedCollection = collection.docs.map((doc) => {
+    const { title, items } = doc.data();
+
+    return {
+      id: doc.id,
+      routeName: encodeURI(title.toLowerCase()),
+      title,
+      items,
+    };
+  });
+
+  // converting array of objects to an object with key and value
+  return transformedCollection.reduce((acc, obj) => {
+    acc[obj.title.toLowerCase()] = obj;
+    return acc;
+  }, {});
 };
 
 export default firebase;
