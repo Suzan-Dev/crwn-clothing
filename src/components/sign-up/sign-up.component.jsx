@@ -1,11 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './sign-up.style.scss';
 
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 
-import { auth, createUserProfileDoc } from '../../firebase/firebase.utils';
+// import { auth, createUserProfileDoc } from '../../firebase/firebase.utils';
+
+import { signUpStart } from '../../redux/user/user.action';
 
 class SignUp extends React.Component {
   constructor() {
@@ -28,29 +31,32 @@ class SignUp extends React.Component {
     e.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
+    const { signUpStart } = this.props;
 
     if (password !== confirmPassword) {
       alert("Passwords didn't match.");
       return;
+    } else {
+      signUpStart(email, password, displayName);
     }
 
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
+    // try {
+    //   const { user } = await auth.createUserWithEmailAndPassword(
+    //     email,
+    //     password
+    //   );
 
-      await createUserProfileDoc(user, { displayName });
+    //   await createUserProfileDoc(user, { displayName });
 
-      this.setState({
-        displayName: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-      });
-    } catch (err) {
-      console.error(err.message);
-    }
+    //   this.setState({
+    //     displayName: '',
+    //     email: '',
+    //     password: '',
+    //     confirmPassword: '',
+    //   });
+    // } catch (err) {
+    //   console.error(err.message);
+    // }
   };
 
   render() {
@@ -101,4 +107,9 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+const mapDispatchToProps = (dispatch) => ({
+  signUpStart: (email, password, displayName) =>
+    dispatch(signUpStart({ email, password, displayName })),
+});
+
+export default connect(null, mapDispatchToProps)(SignUp);
