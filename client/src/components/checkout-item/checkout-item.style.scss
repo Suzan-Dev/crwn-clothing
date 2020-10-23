@@ -22,6 +22,20 @@
     width: 23%;
   }
 
+  .price {
+    padding-left: 15px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 800px) {
+    .name {
+      font-size: 18px;
+    }
+  }
+
   .quantity {
     display: flex;
     align-items: center;

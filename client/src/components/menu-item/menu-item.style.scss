@@ -29,7 +29,11 @@
   }
 
   &.large {
-    height: 390px;
+    height: 240px;
+
+    @media screen and (min-width: 800px) {
+      height: 390px;
+    }
   }
 
   &:first-child {

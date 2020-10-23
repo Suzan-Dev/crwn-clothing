@@ -1,10 +1,14 @@
 .collection-item {
-  width: 22vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
   position: relative;
+
+  @media screen and (min-width: 800px) {
+    width: 100%;
+  }
 
   .image {
     width: 100%;
@@ -33,19 +37,31 @@
 
   button {
     position: absolute;
-    width: 80%;
     bottom: 40px;
-    opacity: 0.85;
-    display: none;
+    opacity: 0.95;
+    display: block;
+    min-width: 100px;
+
+    @media screen and (min-width: 800px) {
+      opacity: 0.85;
+      min-width: 80%;
+      display: none;
+    }
   }
 
   &:hover {
     .image {
-      opacity: 0.8;
+      opacity: unset;
     }
 
     button {
       display: block;
+    }
+
+    @media screen and (min-width: 800px) {
+      .image {
+        opacity: 0.8;
+      }
     }
   }
 }
