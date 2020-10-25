@@ -57,6 +57,7 @@ export const OptionLink = styled(Link)`
 
 export const OptionDiv = styled.div`
   font-size: 16.5px;
+  pointer-events: ${({ events }) => `${events}`};
   ${OptionContainerStyles}
 
   @media screen and (min-width: 800px) {

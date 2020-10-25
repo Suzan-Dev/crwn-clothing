@@ -24,7 +24,7 @@ class ErrorBoundary extends React.Component {
       return (
         <ErrorImageOverlay>
           <ErrorImageContainer imageUrl='https://i.imgur.com/yW2W9SC.png' />
-          <ErrorImageText>Something went wrong!</ErrorImageText>
+          <ErrorImageText>Something went wrong</ErrorImageText>
         </ErrorImageOverlay>
       );
     }

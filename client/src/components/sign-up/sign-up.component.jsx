@@ -73,7 +73,9 @@ const SignUp = ({ signUpStart }) => {
           required
         />
 
-        <CustomButton type='submit'>Sign up</CustomButton>
+        <div className='btn'>
+          <CustomButton type='submit'>Sign up</CustomButton>
+        </div>
       </form>
     </div>
   );
