@@ -1,12 +1,16 @@
 .menu-item {
   min-width: 30%;
-  height: 240px;
+  height: 250px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 7.5px 15px;
   overflow: hidden;
+
+  @media screen and (min-width: 800px) {
+    height: 30vh;
+  }
 
   &:hover {
     cursor: pointer;
@@ -29,10 +33,10 @@
   }
 
   &.large {
-    height: 240px;
+    height: 250px;
 
     @media screen and (min-width: 800px) {
-      height: 390px;
+      height: 50vh;
     }
   }
 
