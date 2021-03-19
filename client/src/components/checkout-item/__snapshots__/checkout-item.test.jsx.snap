@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing: CheckoutItem component! should render CheckoutItem component. 1`] = `
+"<div className=\\"checkout-item\\">
+  <div className=\\"image-container\\">
+    <img src=\\"www.testImage.com\\" alt=\\"item\\" />
+  </div>
+  <span className=\\"name\\">
+    PS5
+  </span>
+  <span className=\\"quantity\\">
+    <div className=\\"arrow\\" onClick={[Function: onClick]}>
+      ❮
+    </div>
+    <span className=\\"value\\">
+      2
+    </span>
+    <div className=\\"arrow\\" onClick={[Function: onClick]}>
+      ❯
+    </div>
+  </span>
+  <span className=\\"price\\">
+    9
+  </span>
+  <span className=\\"remove-btn\\" onClick={[Function: onClick]}>
+    ✕
+  </span>
+</div>"
+`;

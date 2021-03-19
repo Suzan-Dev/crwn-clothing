@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing: CartDropdown component! should render CartDropdown component. 1`] = `
+"<div className=\\"cart-dropdown\\">
+  <div className=\\"cart-items\\">
+    <CartItem item={{...}} />
+    <CartItem item={{...}} />
+  </div>
+  <CustomButton onClick={[Function: onClick]}>
+    <span className=\\"btn-text\\">
+      Go To Checkout
+    </span>
+  </CustomButton>
+</div>"
+`;

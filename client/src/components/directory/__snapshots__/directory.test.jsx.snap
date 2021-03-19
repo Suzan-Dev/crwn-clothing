@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing: Directory component! should render Directory component. 1`] = `
+"<div className=\\"directory-menu\\">
+  <withRouter(MenuItem) />
+  <withRouter(MenuItem) />
+</div>"
+`;

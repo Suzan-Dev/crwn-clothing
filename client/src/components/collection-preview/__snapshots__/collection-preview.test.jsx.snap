@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing: CollectionPreview component! should render CollectionPreview component. 1`] = `
+"<div className=\\"collection-preview\\">
+  <h1 className=\\"title\\">
+    Hello World
+  </h1>
+  <div className=\\"preview\\">
+    <Connect(CollectionItem) item={{...}} />
+    <Connect(CollectionItem) item={{...}} />
+  </div>
+</div>"
+`;

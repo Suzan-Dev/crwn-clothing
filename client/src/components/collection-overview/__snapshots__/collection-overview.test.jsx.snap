@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing: CollectionOverview component! should render CollectionOverview component. 1`] = `
+"<div className=\\"collection-overview\\">
+  <CollectionPreview />
+  <CollectionPreview />
+</div>"
+`;
