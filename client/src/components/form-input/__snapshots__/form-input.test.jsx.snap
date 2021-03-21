@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing: FormInput component! should render FormInput component. 1`] = `
+"<div className=\\"group\\">
+  <input className=\\"form-input\\" onChange={[Function: mockConstructor]} value=\\"test@gmail.com\\" />
+  <label className=\\"form-input-label shrink\\">
+    Email
+  </label>
+</div>"
+`;

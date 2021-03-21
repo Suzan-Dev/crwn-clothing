@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing: MenuItem component! should render MenuItem component. 1`] = `
+"<div className=\\"menu-item large\\" onClick={[Function: onClick]}>
+  <div className=\\"background-image\\" style={{...}} />
+  <div className=\\"content\\">
+    <h1 className=\\"title\\">
+      hats
+    </h1>
+    <span className=\\"subtitle\\">
+      SHOP NOW
+    </span>
+  </div>
+</div>"
+`;
