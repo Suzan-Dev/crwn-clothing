@@ -10,11 +10,9 @@ import Spinner from '../../components/spinner/spinner.component';
 const CollectionOverviewContainer = lazy(() =>
   import('../../components/collection-overview/collection-overview.container')
 );
-const CollectionPageContainer = lazy(() =>
-  import('../collection/collection.container')
-);
+const CollectionPageContainer = lazy(() => import('../collection/collection.container'));
 
-const ShopPage = ({ match, fetchCollectionStart }) => {
+export const ShopPage = ({ match, fetchCollectionStart }) => {
   useEffect(() => {
     fetchCollectionStart();
   }, [fetchCollectionStart]);
@@ -22,16 +20,8 @@ const ShopPage = ({ match, fetchCollectionStart }) => {
   return (
     <div className='shoppage'>
       <Suspense fallback={<Spinner />}>
-        <Route
-          exact
-          path={`${match.path}`}
-          component={CollectionOverviewContainer}
-        />
-        <Route
-          exact
-          path={`${match.path}/:collectionId`}
-          component={CollectionPageContainer}
-        />
+        <Route exact path={`${match.path}`} component={CollectionOverviewContainer} />
+        <Route exact path={`${match.path}/:collectionId`} component={CollectionPageContainer} />
       </Suspense>
     </div>
   );

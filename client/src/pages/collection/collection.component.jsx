@@ -10,11 +10,11 @@ import {
 
 import { selectCollections } from '../../redux/shop/shop.selector';
 
-const CollectionPage = ({ collection }) => {
+export const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
-      <TitleContainer>{title}</TitleContainer>
+      <TitleContainer className='title'>{title}</TitleContainer>
       <ItemsContainer>
         {items.map((item) => (
           <CollectionItemContainer key={item.id} item={item} />
