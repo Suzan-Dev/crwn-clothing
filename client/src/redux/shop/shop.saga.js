@@ -1,16 +1,10 @@
 import { takeEvery, call, put, all } from 'redux-saga/effects';
-
 import ShopActionTypes from './shop.type';
-
-import {
-  firestore,
-  convertCollectionToShopData,
-} from '../../firebase/firebase.utils';
-
+import { firestore, convertCollectionToShopData } from '../../firebase/firebase.utils';
 import { fetchCollectionSuccess, fetchCollectionFailure } from './shop.action';
 
 // saga workers
-function* fetchCollectionAsync() {
+export function* fetchCollectionAsync() {
   try {
     const collectionRef = firestore.collection('collection');
     const snapshot = yield collectionRef.get();
@@ -22,7 +16,7 @@ function* fetchCollectionAsync() {
 }
 
 // saga watchers
-function* fetchCollectionStart() {
+export function* fetchCollectionStart() {
   yield takeEvery(ShopActionTypes.FETCH_COLLECTION_START, fetchCollectionAsync);
 }
 
