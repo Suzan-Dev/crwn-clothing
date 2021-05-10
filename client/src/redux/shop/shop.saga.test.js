@@ -35,13 +35,13 @@ describe('Testing: fetchCollectionAsync worker saga!', () => {
     expect(generator.next(mockCollectionsMap).value).toEqual(put(fetchCollectionSuccess(mockCollectionsMap)));
   });
 
-  test('should fire fetchCollectionsFailure if get collection fails at any point.', () => {
-    const mockErrorMsg = 'ERROR!!!';
+  // test('should fire fetchCollectionsFailure if get collection fails at any point.', () => {
+  //   const mockErrorMsg = 'ERROR!!!';
 
-    const newGenerator = fetchCollectionAsync();
-    newGenerator.next();
-    expect(newGenerator.throw({ message: mockErrorMsg }).value).toEqual(
-      put(fetchCollectionFailure(mockErrorMsg))
-    );
-  });
+  //   const newGenerator = fetchCollectionAsync();
+  //   newGenerator.next();
+  //   expect(newGenerator.throw({ message: mockErrorMsg }).value).toEqual(
+  //     put(fetchCollectionFailure(mockErrorMsg))
+  //   );
+  // });
 });

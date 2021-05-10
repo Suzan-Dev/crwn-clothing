@@ -12,7 +12,7 @@ exports[`Testing: Header component! should render Header component. 1`] = `
     <styled.div event=\\"none\\">
       Contact
     </styled.div>
-    <styled.div className=\\"sign-out\\" onClick={[Function: mockConstructor]}>
+    <styled.div className=\\"sign-out\\" onClick={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }}>
       Sign Out
     </styled.div>
     <Connect(CartIcon) />

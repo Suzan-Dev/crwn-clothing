@@ -4,7 +4,7 @@ exports[`Testing: ShopPage component! should render ShopPage component. 1`] = `
 "<BrowserRouter>
   <Router history={{...}}>
     <Provider store={{...}}>
-      <ShopPage match={{...}} fetchCollectionStart={[Function: mockConstructor]}>
+      <ShopPage match={{...}} fetchCollectionStart={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: { calls: [ [] ], instances: [ undefined ], invocationCallOrder: [ 1 ], results: [ { type: 'return', value: undefined } ] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }}>
         <div className=\\"shoppage\\">
           <Suspense fallback={{...}}>
             <Route exact={true} path=\\"\\" component={{...}} />
