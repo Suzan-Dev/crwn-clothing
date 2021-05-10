@@ -17,6 +17,7 @@ jobs:
       - run:
           name: Running build
           command: | 
+            cd client
             yarn
             CI=true yarn build
   test:  
@@ -29,6 +30,7 @@ jobs:
       - run:
           name: Running test
           command: |
+            cd client
             yarn
             yarn test
   hello:  
