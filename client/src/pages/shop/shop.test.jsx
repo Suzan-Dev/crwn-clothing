@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from '../../setupTests';
 import { combineReducers, createStore } from 'redux';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { ShopPage } from './shop.component';
@@ -42,21 +41,14 @@ describe('Testing: ShopPage component!', () => {
       reducers: { shop: mockReducer },
     });
 
-    const mockMatch = {
-      path: '',
-    };
-
     const mockProps = {
-      match: mockMatch,
       fetchCollectionStart: mockFetchCollectionStart,
     };
 
     wrapper = mount(
-      <BrowserRouter>
-        <Provider store={store}>
-          <ShopPage {...mockProps} />
-        </Provider>
-      </BrowserRouter>
+      <Provider store={store}>
+        <ShopPage {...mockProps} />
+      </Provider>
     );
   });
 

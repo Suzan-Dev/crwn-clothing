@@ -6,7 +6,7 @@ exports[`Testing: Header component! should render Header component. 1`] = `
     <ForwardRef(SvgLogo) className=\\"logo\\" />
   </Styled(Link)>
   <styled.div>
-    <Styled(Link) to=\\"/shop\\">
+    <Styled(Link) to=\\"shop\\">
       Shop
     </Styled(Link)>
     <styled.div event=\\"none\\">

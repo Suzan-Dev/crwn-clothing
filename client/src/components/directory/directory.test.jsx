@@ -19,6 +19,6 @@ describe('Testing: Directory component!', () => {
   });
 
   test('should render num of withRouter Directory component as in sections array.', () => {
-    expect(wrapper.find('withRouter(MenuItem)').length).toBe(mockSections.length);
+    expect(wrapper.find('MenuItem').length).toBe(mockSections.length);
   });
 });

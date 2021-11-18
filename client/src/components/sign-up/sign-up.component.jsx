@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-
-import './sign-up.style.scss';
-
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
-
 import { signUpStart } from '../../redux/user/user.action';
+import './sign-up.style.scss';
 
 const SignUp = ({ signUpStart }) => {
   const [userCredentials, setUserCredentials] = useState({
@@ -35,46 +32,46 @@ const SignUp = ({ signUpStart }) => {
   };
 
   return (
-    <div className='sign-up'>
-      <p className='title'>I don't have an account</p>
+    <div className="sign-up-comp">
+      <p className="title">I don't have an account</p>
       <span>Sign up with your email and password</span>
 
       <form onSubmit={handleSubmit}>
         <FormInput
-          type='text'
-          name='displayName'
+          type="text"
+          name="displayName"
           handleChange={handleChange}
           value={displayName}
-          label='Display Name'
+          label="Display Name"
           required
         />
         <FormInput
-          type='email'
-          name='email'
+          type="email"
+          name="email"
           handleChange={handleChange}
           value={email}
-          label='Email'
+          label="Email"
           required
         />
         <FormInput
-          type='password'
-          name='password'
+          type="password"
+          name="password"
           handleChange={handleChange}
           value={password}
-          label='Password'
+          label="Password"
           required
         />
         <FormInput
-          type='password'
-          name='confirmPassword'
+          type="password"
+          name="confirmPassword"
           handleChange={handleChange}
           value={confirmPassword}
-          label='Confirm Password'
+          label="Confirm Password"
           required
         />
 
-        <div className='btn'>
-          <CustomButton type='submit'>Sign up</CustomButton>
+        <div className="btn">
+          <CustomButton type="submit">Sign up</CustomButton>
         </div>
       </form>
     </div>

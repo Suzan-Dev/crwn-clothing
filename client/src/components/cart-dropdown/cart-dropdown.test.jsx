@@ -5,14 +5,11 @@ import { ToggleHiddenCart } from '../../redux/cart/cart.action';
 
 describe('Testing: CartDropdown component!', () => {
   const mockDispatch = jest.fn();
-  const mockHistory = {
-    push: jest.fn(),
-  };
+  const mockNavigate = jest.fn();
   const mockCartItem = [{ id: 1 }, { id: 2 }];
 
   const mockProps = {
     cartItem: mockCartItem,
-    history: mockHistory,
     dispatch: mockDispatch,
   };
 
@@ -27,7 +24,7 @@ describe('Testing: CartDropdown component!', () => {
 
   test('should call history.push & dispatch ToggleHiddenCart action when button is clicked.', () => {
     wrapper.find('CustomButton').simulate('click');
-    expect(mockHistory.push).toHaveBeenCalled();
+    expect(mockNavigate).toHaveBeenCalled({ to: 'checkout' });
     expect(mockDispatch).toHaveBeenCalledWith(ToggleHiddenCart());
   });
 
@@ -39,7 +36,6 @@ describe('Testing: CartDropdown component!', () => {
     const mockCartItem = [];
     const mockProps = {
       cartItem: mockCartItem,
-      history: mockHistory,
       dispatch: mockDispatch,
     };
     const wrapper2 = shallow(<CartDropdown {...mockProps} />);

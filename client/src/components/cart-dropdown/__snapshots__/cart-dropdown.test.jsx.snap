@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testing: CartDropdown component! should render CartDropdown component. 1`] = `
-"<div className=\\"cart-dropdown\\">
-  <div className=\\"cart-items\\">
-    <CartItem item={{...}} />
-    <CartItem item={{...}} />
-  </div>
-  <CustomButton onClick={[Function: onClick]}>
-    <span className=\\"btn-text\\">
-      Go To Checkout
-    </span>
-  </CustomButton>
-</div>"
+"<ContextProvider value={{...}}>
+  <RouterInner>
+    <CartDropdown cartItem={{...}} dispatch={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} />
+  </RouterInner>
+</ContextProvider>"
 `;

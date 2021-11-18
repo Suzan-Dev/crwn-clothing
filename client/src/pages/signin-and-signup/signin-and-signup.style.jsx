@@ -4,6 +4,7 @@ export const SigninAndSignupContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 5px;
+  gap: 15px;
 
   @media screen and (min-width: 800px) {
     width: 750px;

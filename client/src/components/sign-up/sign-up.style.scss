@@ -1,10 +1,10 @@
-.sign-up {
-  // width: 380px;
+.sign-up-comp {
+  min-width: 100%;
   display: flex;
   flex-direction: column;
 
   @media screen and (min-width: 800px) {
-    width: 350px;
+    min-width: 375px;
   }
 
   .title {
